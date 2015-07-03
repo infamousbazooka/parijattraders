@@ -1,0 +1,379 @@
+@import "http://fonts.googleapis.com/css?family=Merriweather";
+@import "http://fonts.googleapis.com/css?family=Arvo";
+@import "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+* {
+    font-family: 'Merriweather', serif;
+}
+hr {
+    border: 0px none;
+    height: 2px;
+    margin: 3% 0;
+    background: linear-gradient(to right,  #CCC,  #333,  #CCC) repeat scroll 0% 0% #333;
+}
+i {
+    font-size: 120% !important;
+    margin-right: 5px;
+    color: #fffd27;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+}
+html,body,.loader{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-image: url('../images/bg.png');
+}
+.loader{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:9999999;
+    background-color: #99FFCC;
+}
+.tyre{
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    background-image: url('../images/tyre.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    -o-animation:spin 2s linear infinite;
+    -ms-animation:spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+.wheel{
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/wheel.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-animation:spine 3s linear infinite;
+    -moz-animation:spine 3s linear infinite;
+    -o-animation:spine 3s linear infinite;
+    -ms-animation:spine 3s linear infinite;
+    animation: spine 3s linear infinite;
+}
+.loaded{
+    display: none;
+}
+@-webkit-keyframes spin{
+    0%{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+@keyframes spin{
+    0%{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+@-webkit-keyframes spine{
+    0%{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(-360deg);
+        -moz-transform:rotate(-360deg);
+        -o-transform:rotate(-360deg);
+        -ms-transform:rotate(-360deg);
+        transform:rotate(-360deg);
+    }
+}
+@keyframes spine{
+    0%{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(-360deg);
+        -moz-transform:rotate(-360deg);
+        -o-transform:rotate(-360deg);
+        -ms-transform:rotate(-360deg);
+        transform:rotate(-360deg);
+    }
+}
+.fa-heart{
+    color: #00cc66;
+}
+.fa-book{
+    color: #00ffcc;
+}
+.fa-phone{
+    color: #ff0066;
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.navbar-brand:hover {
+    color: #aaa;
+}
+.jumbotron {
+    text-align: center;
+    background-image: url('../images/mainbg.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 20px rgba(34, 34, 34, 0.7);
+}
+.jumbotron .container {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px 2%;
+    box-shadow: 0px 0px 10px rgba(34, 34, 34, 0.7);
+    border-radius: 10px;
+}
+.jumbotron h1 {
+    text-shadow: 0px 0px 20px #333;
+    padding-bottom: 2%;
+}
+.jumbotron span {
+    font-size: 150%;
+    padding-top: 1%;
+    border-top: 3px solid #000;
+    text-shadow: 0px 0px 20px #333;
+}
+.jumbotron b{
+    color: #BA0000;
+}
+.home{
+    width: 70%;
+    margin: 2% 15%;
+    line-height: 150%;
+    font-size: 120%;
+    text-align: justify;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    padding: 4%;
+    box-shadow: 0px 0px 20px rgba(34, 34, 34, 0.7);
+}
+.maincontent {
+    text-align: center;
+}
+.maincontent .row {
+    margin: 0;
+}
+.maincontent img {
+    box-shadow: 0px 0px 20px rgba(34, 34, 34, 0.7);
+}
+.maincontent .container {
+    padding: 30px 10px 0 10px;
+}
+.col-md-5 {
+    text-align: center;
+}
+.col-md-5 h4 {
+    font-family: 'Arvo',  serif;
+    line-height: 150%;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: justify;
+    background-color: #222d2f;
+    border-radius: 10px;
+    color: #fff;
+    padding: 4%;
+    font-size: 150%;
+    box-shadow: 0px 0px 20px rgba(34, 34, 34, 0.7);
+}
+footer {
+    margin-top: 3%;
+}
+footer a {
+    color: #aaa;
+}
+footer a:hover {
+    color: #ffc200;
+    text-decoration: none;
+}
+footer span {
+    font-size: 120%;
+}
+footer a:hover span {
+    color: #66cc00;
+}
+.partner{
+    text-align: center;
+    width: 60%;
+    margin: 3% 20%;
+    font-size: 130%;
+}
+.partner h1{
+    border-bottom: 1px solid #222d2f;
+}
+.tabs .row {
+    padding: 0;
+}
+.tabs .thumbnail{
+    margin: 0px 0;
+    position: relative;
+    border: none;
+    box-shadow: 0px 0px 20px rgba(34, 34, 34, 0.3);
+}
+.two, .four, .five, .seven {
+    box-shadow: 0px 0px 20px rgba(34, 34, 34, 0.7) !important;
+    z-index: 999;
+}
+.mainbody {
+    text-align: center;
+    margin-top: 3%;
+}
+.mainbody h4 {
+    text-align: center;
+    line-height: 30px;
+    font-family: 'Arvo',  serif;
+}
+.mainbody h1 {
+    border-bottom: 1px solid #000;
+    padding: 2% 0;
+}
+textarea {
+    min-height: 120px;
+}
+form .btn, form .btn:focus {
+    background-color: #222d2f;
+    color: #fff;
+    width: 100%;
+    margin-top: 3%;
+    padding: 2%;
+}
+form .btn:hover {
+    color: #ffd700;
+}
+form input {
+    margin: 4% 0;
+}
+.address .col-md-4 {
+    text-align: center;
+}
+.add {
+    margin: 40px 0;
+}
+.addressborder{
+    border-right: 2px solid #222d2f;
+}
+#map-canvas {
+    height: 300px;
+    margin-bottom: 15px;
+    border: 2px solid #fff;
+}
+.about{
+    width: 50%;
+    margin: 2% 25%;
+    font-size: 120%;
+    line-height: 200%;
+    text-align: justify;
+    margin-bottom: 120px;
+}
+@media screen and (max-width: 800px) {
+    hr {
+        height: 2px;
+        margin: 3% 0;
+        background: #222d2f;
+    }
+    h1 {
+        font-size: 180%;
+    }
+    h4 {
+        font-size: 100%;
+    }
+    span {
+        font-size: 120% !important;
+    }
+    footer p {
+        display: inline-block;
+    }
+    footer .container, .pull-left, .pull-right {
+        text-align: center !important;
+        float: none !important;
+    }
+    .navbar-btn{
+        display: none;
+    }
+    .jumbotron {
+        padding: 30px 0px;
+        background-attachment: scroll;
+    }
+    .jumbotron .container {
+        border-radius: 0;
+    }
+    .home{
+        width: 90%;
+        margin: 2% 5%;
+    }
+    .maincontent h2{
+        font-size: 130%;
+        font-weight: bold;
+    }
+    .four, .five{
+        box-shadow: none;
+        z-index: 0;
+    }
+    .three, .six {
+        box-shadow: 0px 0px 20px rgba(34, 34, 34, 0.7);
+        z-index: 999;
+    }
+    .addressborder{
+        border-right: none;
+        border-bottom: 2px solid #222d2f;
+    }
+    .partner{
+        width: 90%;
+        margin: 3% 5%;
+        font-size: 100%;
+        text-align: justify;
+    }
+    .col-md-5 h4 {
+        border-radius: 0px;
+        padding: 4%;
+        font-size: 120%;
+        vertical-align: initial;
+    }
+    .about{
+        width: 90%;
+        margin: 2% 5%;
+        font-size: 90%;
+        line-height: 150%;
+        margin-bottom: 150px;
+    }
+}
